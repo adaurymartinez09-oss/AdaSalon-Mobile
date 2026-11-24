@@ -13,25 +13,36 @@ import {
   IonList,
   IonItem,
   IonLabel,
-  IonMenuToggle,
+  IonIcon,
+  IonSplitPane,
   MenuController
 } from '@ionic/angular';
+
+import { addIcons } from 'ionicons';
+import {
+  sparklesOutline,
+  homeOutline,
+  peopleOutline,
+  cubeOutline
+} from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  imports: [
-    IonApp,
-    IonRouterOutlet,
-    IonMenu,
-    IonHeader,
-    IonToolbar,
+  
+   imports: [
+  IonApp,
+  IonRouterOutlet,
+  IonMenu,
+  IonHeader,
+  IonToolbar,
     IonTitle,
     IonContent,
     IonList,
     IonItem,
     IonLabel,
-    IonMenuToggle
+    IonIcon,
+    IonSplitPane
   ],
 })
 export class AppComponent {
@@ -39,7 +50,14 @@ export class AppComponent {
   constructor(
     private router: Router,
     private menuController: MenuController
-  ) {}
+  ) {
+    addIcons({
+      sparklesOutline,
+      homeOutline,
+      peopleOutline,
+      cubeOutline
+    });
+  }
 
   async navegar(ruta: string) {
     await this.menuController.close('first-menu');

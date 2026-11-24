@@ -11,7 +11,6 @@ import {
   IonCardHeader,
   IonCardTitle,
   IonCardContent,
-  IonButton,
   IonGrid,
   IonRow,
   IonCol
@@ -25,21 +24,21 @@ import { IonMenuButton } from '@ionic/angular/ion-menu-button';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   imports: [
-    CommonModule,
-    IonHeader,
-    IonToolbar,
-    IonTitle,
-    IonContent,
-    IonButtons,
-    IonMenuButton,
-    IonCard,
-    IonCardHeader,
-    IonCardTitle,
-    IonCardContent,
-    IonButton,
-    IonGrid,
-    IonRow,
-    IonCol
+  CommonModule,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+  IonButtons,
+  IonMenuButton,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardContent,
+  IonGrid,
+  IonRow,
+  IonCol
+
   ],
 })
 export class HomePage {
