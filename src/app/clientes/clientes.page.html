@@ -1,0 +1,56 @@
+
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first-menu" autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Clientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-refresher slot="fixed" (ionRefresh)="actualizarClientes($event)">
+    <ion-refresher-content
+      pullingText="Desliza para actualizar"
+      refreshingText="Actualizando clientes...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <div class="encabezado-clientes">
+    <h2>Gestión de clientes</h2>
+    <p>Administra los clientes de AdaSalon</p>
+    <h3>{{ clientes.length }} clientes registrados</h3>
+  </div>
+
+  <ion-list class="lista-clientes">
+
+    <ion-item-sliding *ngFor="let cliente of clientes">
+
+     <ion-item
+  (pointerdown)="iniciarPulsacion(cliente)"
+  (pointerup)="cancelarPulsacion()"
+  (pointerleave)="cancelarPulsacion()"
+  (pointercancel)="cancelarPulsacion()">
+
+  <ion-label>
+    <h2>{{ cliente.nombre }}</h2>
+    <p>{{ cliente.telefono }}</p>
+    <p class="ayuda-gesto">Mantén presionado para ver opciones</p>
+  </ion-label>
+
+</ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option
+          color="danger"
+          (click)="eliminarCliente(cliente.id)">
+          Eliminar
+        </ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+  </ion-list>
+
+</ion-content>

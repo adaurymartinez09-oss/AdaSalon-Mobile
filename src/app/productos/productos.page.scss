@@ -1,0 +1,108 @@
+
+ion-content {
+  --background: #111116;
+  color: #ffffff;
+}
+
+ion-toolbar {
+  --background: #1c1b23;
+  --color: #ffffff;
+  --border-color: #a88746;
+}
+
+ion-title {
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.encabezado-productos {
+  padding: 20px;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #292333, #17151c);
+  border: 1px solid #66502e;
+  border-radius: 18px;
+}
+
+.encabezado-productos h2 {
+  color: #e3bd76;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.encabezado-productos p {
+  color: #c4b9a5;
+}
+
+.encabezado-productos h3 {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.instruccion-zoom {
+  color: #e3bd76;
+  text-align: center;
+  font-size: 13px;
+  margin: 16px 0;
+}
+
+.catalogo-productos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+ion-card {
+  margin: 0;
+  background: #22212a;
+  border: 1px solid #49404f;
+  border-radius: 14px;
+}
+
+.imagen-producto {
+  height: 135px;
+  background: linear-gradient(135deg, #393044, #1c1b23);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  touch-action: none;
+}
+
+.producto-emoji {
+  font-size: 65px;
+  transition: transform 0.08s ease-out;
+  user-select: none;
+}
+
+ion-card-content h2 {
+  color: #e3bd76;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+ion-card-content p {
+  color: #c4b9a5;
+  font-size: 12px;
+}
+
+ion-card-content .categoria {
+  color: #a88746;
+}
+
+ion-card-content h3 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.boton-zoom {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  border: 1px solid #a88746;
+  border-radius: 12px;
+  background: #292333;
+  color: #e3bd76;
+  font-weight: bold;
+}
